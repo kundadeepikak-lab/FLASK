@@ -1,0 +1,57 @@
+body{
+    font-family: Arial,sans-serif;
+    background-color: #f6f9fc;
+    margin-top:100px;
+    padding: 0;
+}
+.container{
+    width: 60%;
+    margin: 40px auto;
+    background:aquamarine;
+    padding: 25px 0px 40px 0px;
+    box-shadow: 0 2px 6px violet;
+}
+.nav a{
+    background: #007bff;
+    color: peachpuff;
+    padding: 8px 14px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    transition:background 0.3s ease;
+}
+.nav a:hover{
+    background: #0056b3;
+}
+button{
+    background: green;
+    color: white;
+    padding: 0px 14px;
+    border:none;
+    border-radius: 5px;
+}
+button:hover{
+    background:#007bff;
+}
+.flash{
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.flash.success{
+    background-color:whitesmoke;
+    color: brown;
+    border: 1px solid aquamarine;
+}
+.flash.error{
+    background-color: coral;
+    color: brown;
+    border: 1px solid lightsalmon;
+}
+.flash.info{
+    background-color: skyblue;
+    color: darkgreen;
+    border: 1px solid #bee5eb;
+}
