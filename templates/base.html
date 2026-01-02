@@ -1,0 +1,50 @@
+!DOCTYPE html>
+<html>
+  <head>
+    <title>Flask app</title>
+    <link rel="stylesheet" href="static/style.css">
+    <style>
+      .flash {
+        padding: 10px 15px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+      .flash.success {
+        background-color:aqua;
+        color: blue;
+        border: 1px solid rgb(222, 14, 48);
+      }
+      .flash.error {
+        background-color: aqua;
+        color: blue;
+        border: 1px solid rgb(222, 14, 48);
+      }
+      .flash.info {
+        background-color: aqua;
+        color: blue;
+        border: 1px solid rgb(222, 14, 48);
+      }
+    </style>
+  </head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="/">Home</a>
+            <a href="/login">Login</a>
+            <a href="/upload">upload</a>
+        </div>
+        <hr>
+        {% with messages=get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category,message in messages %}
+        <div class="flask{{category}}">
+            {{message}}
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith  %}
+        {% block content %}{% endblock %}        
+    </div>
+</body>
+</html>
